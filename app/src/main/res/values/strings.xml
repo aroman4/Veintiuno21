@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Veintiuno 21 v0.11</string>
+    <string name="dealerCards">Cartas dealer</string>
+    <string name="playerCards">Tus cartas</string>
+    <string name="stand">Me quedo</string>
+    <string name="hit">Dame otra!</string>
+    <string name="deal">Repartir!</string>
+</resources>
