@@ -138,60 +138,12 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <ImageView
-        android:id="@+id/c1"
-        android:layout_width="100px"
-        android:layout_height="150px"
+        android:id="@+id/imvPlayer"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
         android:layout_above="@+id/sumPlayer"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView"
-        android:layout_marginBottom="15dp"
-        app:srcCompat="@drawable/c1" />
-
-    <ImageView
-        android:id="@+id/c2"
-        android:layout_width="100px"
-        android:layout_height="150px"
-        android:layout_alignBottom="@+id/c1"
-        android:layout_alignEnd="@+id/textView"
-        android:layout_alignRight="@+id/textView"
-        android:layout_marginBottom="12dp"
-        app:srcCompat="@drawable/c1" />
-
-    <ImageView
-        android:id="@+id/c3"
-        android:layout_width="100px"
-        android:layout_height="150px"
-        android:layout_above="@+id/sumPlayer"
-        android:layout_alignEnd="@+id/sumPlayer"
-        android:layout_alignRight="@+id/sumPlayer"
-        app:srcCompat="@drawable/c1" />
-
-    <ImageView
-        android:id="@+id/c4"
-        android:layout_width="100px"
-        android:layout_height="150px"
-        android:layout_alignEnd="@+id/restoMazo"
-        android:layout_alignRight="@+id/restoMazo"
-        android:layout_alignTop="@+id/c2"
-        app:srcCompat="@drawable/c1" />
-
-    <ImageView
-        android:id="@+id/c5"
-        android:layout_width="100px"
-        android:layout_height="150px"
-        android:layout_alignBottom="@+id/c2"
-        android:layout_marginBottom="12dp"
-        android:layout_toEndOf="@+id/c1"
-        android:layout_toRightOf="@+id/c1"
-        app:srcCompat="@drawable/c1" />
-
-    <ImageView
-        android:id="@+id/c6"
-        android:layout_width="100px"
-        android:layout_height="150px"
-        android:layout_alignTop="@+id/c1"
-        android:layout_toEndOf="@+id/sumDealer"
-        android:layout_toRightOf="@+id/sumDealer"
-        app:srcCompat="@drawable/c1" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp"
+        app:srcCompat="@android:color/transparent" />
 
 </RelativeLayout>
