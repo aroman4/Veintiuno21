@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/background"
+    android:background="@drawable/background21"
     tools:context="com.example.alvaroalejandro.veintiuno21.MainActivity">
 
     <TextView
@@ -21,47 +21,22 @@
         android:id="@+id/textView2" />
 
     <TextView
-        android:id="@+id/tx_dealerCards"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView"
-        android:layout_marginBottom="80dp"
-        android:layout_toEndOf="@+id/bt_stand"
-        android:hint="cartas repartidor"
-        android:textAlignment="center"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/tx_playerCards"
+        android:layout_above="@+id/imvPlayer"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="13dp"
         android:text="@string/playerCards"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    <TextView
-        android:id="@+id/tx_playerCards"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/restoMazo"
-        android:layout_alignEnd="@+id/tx_dealerCards"
-        android:layout_alignRight="@+id/tx_dealerCards"
-        android:layout_marginBottom="134dp"
-        android:hint="cartas jugador"
-        android:textAlignment="center"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
     <Button
+        android:id="@+id/bt_stand"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/stand"
-        android:id="@+id/bt_stand"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:onClick="stand" />
+        android:onClick="stand"
+        android:text="@string/stand" />
 
     <Button
         android:layout_width="wrap_content"
@@ -74,27 +49,25 @@
         android:onClick="hit" />
 
     <TextView
+        android:id="@+id/sumDealer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:id="@+id/sumDealer"
+        android:layout_above="@+id/imvDealer"
+        android:layout_alignEnd="@+id/sumPlayer"
         android:hint="suma dealer"
-        android:layout_below="@+id/tx_dealerCards"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
+        android:id="@+id/sumPlayer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_above="@+id/textView"
+        android:layout_alignStart="@+id/bt_hit"
+        android:layout_marginBottom="12dp"
         android:hint="suma jugador"
-        android:id="@+id/sumPlayer"
-        android:layout_below="@+id/tx_playerCards"
-        android:layout_alignRight="@+id/bt_deal"
-        android:layout_alignEnd="@+id/bt_deal"
-        android:layout_marginTop="11dp"
-        android:textAlignment="center"/>/>
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceSmall" />/>
 
     <Button
         android:layout_width="wrap_content"
@@ -106,23 +79,23 @@
         android:onClick="playGame" />
 
     <TextView
+        android:id="@+id/restoMazo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:id="@+id/restoMazo"
-        android:layout_above="@+id/bt_stand"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/lost"
+        android:layout_marginTop="43dp"
         android:hint="#cartas restantes"
         android:textAlignment="center"
-        />
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
         android:id="@+id/won"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imvDealer"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imvDealer"
+        android:layout_marginTop="28dp"
         android:hint="#Ganados"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -130,27 +103,26 @@
         android:id="@+id/lost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/won"
-        android:layout_alignRight="@+id/won"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/won"
-        android:layout_marginTop="13dp"
+        android:layout_toStartOf="@+id/imvDealer"
         android:hint="#Perdidos"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <ImageView
         android:id="@+id/imvPlayer"
-        android:layout_width="400dp"
+        android:layout_width="200dp"
         android:layout_height="100dp"
-        android:layout_above="@+id/sumPlayer"
+        android:layout_above="@+id/bt_stand"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="11dp"
+        android:layout_marginBottom="22dp"
         app:srcCompat="@android:color/transparent" />
 
     <ImageView
         android:id="@+id/imvDealer"
-        android:layout_width="400dp"
+        android:layout_width="200dp"
         android:layout_height="100dp"
-        android:layout_alignParentStart="true"
+        android:layout_alignStart="@+id/imvPlayer"
         android:layout_below="@+id/textView2"
         app:srcCompat="@android:color/transparent" />
 
