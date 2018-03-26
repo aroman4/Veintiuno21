@@ -120,9 +120,9 @@
         android:id="@+id/won"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/tx_dealerCards"
+        android:layout_alignBottom="@+id/imvDealer"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
+        android:layout_marginBottom="24dp"
         android:hint="#Ganados"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
