@@ -11,24 +11,6 @@
     android:background="@drawable/background21"
     tools:context="com.example.alvaroalejandro.veintiuno21.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dealerCards"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:id="@+id/textView2" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/imvPlayer"
-        android:layout_toStartOf="@+id/imvPlayer"
-        android:text="@string/playerCards"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
     <Button
         android:id="@+id/bt_stand"
         android:layout_width="wrap_content"
@@ -50,24 +32,33 @@
 
     <TextView
         android:id="@+id/sumDealer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/imvDealer"
-        android:layout_alignEnd="@+id/sumPlayer"
-        android:hint="suma dealer"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/imvDealer"
+        android:background="@drawable/contador_jugador"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:hint="0"
         android:textAlignment="center"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/sumPlayer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView"
-        android:layout_alignBottom="@+id/textView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentEnd="true"
-        android:hint="suma jugador"
+        android:layout_alignTop="@+id/imvPlayer"
+        android:background="@drawable/contador_jugador"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:hint="0"
         android:textAlignment="center"
-        android:textAppearance="?android:attr/textAppearanceSmall" />/>
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="20sp"
+        android:textStyle="bold" />/>
 
     <Button
         android:layout_width="wrap_content"
@@ -80,12 +71,14 @@
 
     <TextView
         android:id="@+id/restoMazo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:background="@drawable/contador_cartas"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/lost"
-        android:hint="#cartas restantes"
+        android:hint="52"
         android:textAlignment="center"
+        android:gravity="center"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
