@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingLeft="2dp"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/background21"
@@ -72,32 +72,33 @@
 
     <TextView
         android:id="@+id/restoMazo"
-        android:background="@drawable/contador_cartas"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/lost"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/contador_cartas"
+        android:gravity="center"
         android:hint="52"
         android:textAlignment="center"
-        android:gravity="center"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
         android:id="@+id/won"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imvDealer"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/imvDealer"
         android:hint="#Ganados"
+        android:paddingLeft="15dp"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
         android:id="@+id/lost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/won"
         android:layout_below="@+id/won"
-        android:layout_toStartOf="@+id/imvDealer"
         android:hint="#Perdidos"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -115,5 +116,88 @@
         android:layout_height="170dp"
         android:layout_alignStart="@+id/imvPlayer"
         app:srcCompat="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/imvApuestas"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:layout_alignStart="@+id/imvPlayer"
+        android:layout_alignTop="@+id/restoMazo"
+        app:srcCompat="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/ap10"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txDinero"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/f10"
+        android:onClick="apostar10" />
+
+    <Button
+        android:id="@+id/ap25"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignTop="@+id/ap10"
+        android:layout_toEndOf="@+id/ap10"
+        android:background="@drawable/f25"
+        android:onClick="apostar25" />
+
+    <Button
+        android:id="@+id/ap50"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ap10"
+        android:background="@drawable/f50"
+        android:onClick="apostar50" />
+
+    <Button
+        android:id="@+id/ap100"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignTop="@+id/ap50"
+        android:layout_toEndOf="@+id/ap50"
+        android:background="@drawable/f100"
+        android:onClick="apostar100" />
+
+    <TextView
+        android:id="@+id/txDinero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/sumPlayer"
+        android:layout_alignBottom="@+id/sumPlayer"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="15dp"
+        android:hint="$:" />
+
+    <TextView
+        android:id="@+id/txBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lost"
+        android:layout_below="@+id/lost"
+        android:hint="#Balance" />
+
+    <TextView
+        android:id="@+id/txMesa"
+        android:background="@drawable/contador_cartas"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/won"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="5dp"
+        android:hint="Mesa: 0" />
+
+    <Button
+        android:id="@+id/cancelarApuesta"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@+id/bt_stand"
+        android:layout_below="@+id/ap50"
+        android:onClick="devolver"
+        android:text="Devolver $"
+        android:textSize="8sp" />
 
 </RelativeLayout>
